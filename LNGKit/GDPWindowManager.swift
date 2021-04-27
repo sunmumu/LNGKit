@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class GDPWindowManager {
+public class GDPWindowManager {
     
     class func screenShot () -> UIImage {
         let imageSize = UIScreen.main.bounds.size
