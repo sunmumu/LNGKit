@@ -11,7 +11,7 @@ import UIKit
 
 public class GDPWindowManager {
     
-    class func screenShot () -> UIImage {
+    public class func screenShot () -> UIImage {
         let imageSize = UIScreen.main.bounds.size
         
         UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)
