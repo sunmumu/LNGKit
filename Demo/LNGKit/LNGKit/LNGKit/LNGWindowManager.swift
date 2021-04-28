@@ -1,17 +1,9 @@
-//
-//  GDPWindowManager.swift
-//  HanYuanSchool
-//
-//  Created by sun on 2021/4/25.
-//  Copyright © 2021 hanyuan. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
-public class GDPWindowManager {
+public class LNGWindowManager {
     
-    public class func screenShot () -> UIImage {
+    public class func getScreenShot () -> UIImage {
         let imageSize = UIScreen.main.bounds.size
         
         UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)

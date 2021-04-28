@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A48D8CA8263904C90038158A /* LNGView.m in Sources */ = {isa = PBXBuildFile; fileRef = A48D8CA7263904C90038158A /* LNGView.m */; };
 		A4D17A49263807D900B4259C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D17A48263807D900B4259C /* AppDelegate.swift */; };
 		A4D17A4B263807D900B4259C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D17A4A263807D900B4259C /* SceneDelegate.swift */; };
 		A4D17A4D263807D900B4259C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D17A4C263807D900B4259C /* ViewController.swift */; };
 		A4D17A50263807D900B4259C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D17A4E263807D900B4259C /* Main.storyboard */; };
 		A4D17A52263807D900B4259C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D17A51263807D900B4259C /* Assets.xcassets */; };
 		A4D17A55263807D900B4259C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D17A53263807D900B4259C /* LaunchScreen.storyboard */; };
-		A4D17A61263808C700B4259C /* GDPWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D17A60263808C700B4259C /* GDPWindowManager.swift */; };
+		A4F077462639571D00EFD834 /* LNGWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F077422639571C00EFD834 /* LNGWindowManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A48D8CA5263904C80038158A /* LNGKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LNGKit-Bridging-Header.h"; sourceTree = "<group>"; };
+		A48D8CA6263904C90038158A /* LNGView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LNGView.h; sourceTree = "<group>"; };
+		A48D8CA7263904C90038158A /* LNGView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LNGView.m; sourceTree = "<group>"; };
 		A4D17A45263807D900B4259C /* LNGKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LNGKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D17A48263807D900B4259C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4D17A4A263807D900B4259C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,7 +29,7 @@
 		A4D17A51263807D900B4259C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4D17A54263807D900B4259C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4D17A56263807D900B4259C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4D17A60263808C700B4259C /* GDPWindowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDPWindowManager.swift; sourceTree = "<group>"; };
+		A4F077422639571C00EFD834 /* LNGWindowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNGWindowManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +66,13 @@
 				A4D17A48263807D900B4259C /* AppDelegate.swift */,
 				A4D17A4A263807D900B4259C /* SceneDelegate.swift */,
 				A4D17A4C263807D900B4259C /* ViewController.swift */,
+				A48D8CA6263904C90038158A /* LNGView.h */,
+				A48D8CA7263904C90038158A /* LNGView.m */,
 				A4D17A4E263807D900B4259C /* Main.storyboard */,
 				A4D17A51263807D900B4259C /* Assets.xcassets */,
 				A4D17A53263807D900B4259C /* LaunchScreen.storyboard */,
 				A4D17A56263807D900B4259C /* Info.plist */,
+				A48D8CA5263904C80038158A /* LNGKit-Bridging-Header.h */,
 			);
 			path = LNGKit;
 			sourceTree = "<group>";
@@ -73,7 +80,7 @@
 		A4D17A5F263808C700B4259C /* LNGKit */ = {
 			isa = PBXGroup;
 			children = (
-				A4D17A60263808C700B4259C /* GDPWindowManager.swift */,
+				A4F077422639571C00EFD834 /* LNGWindowManager.swift */,
 			);
 			path = LNGKit;
 			sourceTree = "<group>";
@@ -109,6 +116,7 @@
 				TargetAttributes = {
 					A4D17A44263807D900B4259C = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -151,7 +159,8 @@
 				A4D17A4D263807D900B4259C /* ViewController.swift in Sources */,
 				A4D17A49263807D900B4259C /* AppDelegate.swift in Sources */,
 				A4D17A4B263807D900B4259C /* SceneDelegate.swift in Sources */,
-				A4D17A61263808C700B4259C /* GDPWindowManager.swift in Sources */,
+				A4F077462639571D00EFD834 /* LNGWindowManager.swift in Sources */,
+				A48D8CA8263904C90038158A /* LNGView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LSL9Y2Q8F4;
 				INFOPLIST_FILE = LNGKit/Info.plist;
@@ -308,6 +318,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = afea.LNGKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LNGKit/LNGKit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -318,6 +330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LSL9Y2Q8F4;
 				INFOPLIST_FILE = LNGKit/Info.plist;
@@ -328,6 +341,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = afea.LNGKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LNGKit/LNGKit-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
