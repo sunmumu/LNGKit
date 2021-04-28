@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'LNGKit'
-  s.version      = '0.0.7'
+  s.version      = '0.0.8'
   s.summary      = 'A collection of iOS components.'
   s.homepage     = 'https://github.com/sunmumu/LNGKit'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -10,8 +10,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/sunmumu/LNGKit.git', :tag => s.version.to_s }
   s.requires_arc = true
   s.source_files = 'LNGKit/**/*.swift'
-  s.public_header_files = 'LNGKit/**/*.{h}'
-  s.swift_version = '5.0', '5.1', '5.2', '5.3'
+  s.swift_version = '4.0', '4.1', '4.2','5.0', '5.1', '5.2', '5.3'
   
   s.libraries = 'z'
   s.frameworks = 'UIKit', 'CoreFoundation'
