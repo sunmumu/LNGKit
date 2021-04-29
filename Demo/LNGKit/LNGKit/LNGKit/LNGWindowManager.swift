@@ -3,7 +3,7 @@ import UIKit
 
 public class LNGWindowManager {
     
-    public class func getScreenShot () -> UIImage {
+    public class func c_getScreenShot () -> UIImage {
         let imageSize = UIScreen.main.bounds.size
         
         UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)

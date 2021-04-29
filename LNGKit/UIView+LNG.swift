@@ -9,8 +9,7 @@ import UIKit
 
 extension UIView {
     
-    public func lng_getViewImage() -> (UIImage) {
-        
+    public func c_getViewImage() -> (UIImage) {
         UIGraphicsBeginImageContextWithOptions(self.frame.size, false, 0.0)
         self.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage.init()
@@ -18,7 +17,7 @@ extension UIView {
         return image
     }
     
-    public func lng_saveViewImageToPhoto() {
+    public func c_saveViewImageToPhoto() {
         UIGraphicsBeginImageContextWithOptions(self.frame.size, false, 0.0)
         self.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage.init()

@@ -16,6 +16,8 @@
 		A4D17A55263807D900B4259C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D17A53263807D900B4259C /* LaunchScreen.storyboard */; };
 		A4F077462639571D00EFD834 /* LNGWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F077422639571C00EFD834 /* LNGWindowManager.swift */; };
 		A4F077842639660900EFD834 /* UIView+LNG.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F077832639660900EFD834 /* UIView+LNG.swift */; };
+		A4F077C9263A8EC400EFD834 /* UIImage+LNG.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F077C8263A8EC400EFD834 /* UIImage+LNG.swift */; };
+		A4F077CC263A917C00EFD834 /* UIFont+LNG.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F077CB263A917C00EFD834 /* UIFont+LNG.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		A4D17A56263807D900B4259C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4F077422639571C00EFD834 /* LNGWindowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNGWindowManager.swift; sourceTree = "<group>"; };
 		A4F077832639660900EFD834 /* UIView+LNG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LNG.swift"; sourceTree = "<group>"; };
+		A4F077C8263A8EC400EFD834 /* UIImage+LNG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+LNG.swift"; sourceTree = "<group>"; };
+		A4F077CB263A917C00EFD834 /* UIFont+LNG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+LNG.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				A4F077422639571C00EFD834 /* LNGWindowManager.swift */,
+				A4F077CB263A917C00EFD834 /* UIFont+LNG.swift */,
 				A4F077832639660900EFD834 /* UIView+LNG.swift */,
+				A4F077C8263A8EC400EFD834 /* UIImage+LNG.swift */,
 			);
 			path = LNGKit;
 			sourceTree = "<group>";
@@ -163,6 +169,8 @@
 				A4D17A49263807D900B4259C /* AppDelegate.swift in Sources */,
 				A4D17A4B263807D900B4259C /* SceneDelegate.swift in Sources */,
 				A4F077462639571D00EFD834 /* LNGWindowManager.swift in Sources */,
+				A4F077CC263A917C00EFD834 /* UIFont+LNG.swift in Sources */,
+				A4F077C9263A8EC400EFD834 /* UIImage+LNG.swift in Sources */,
 				A4F077842639660900EFD834 /* UIView+LNG.swift in Sources */,
 				A48D8CA8263904C90038158A /* LNGView.m in Sources */,
 			);
