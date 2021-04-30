@@ -25,4 +25,50 @@ extension UIView {
         UIImageWriteToSavedPhotosAlbum(image,self,nil,nil)
     }
     
+    public func c_setCornerRadius(cornerRadius:CGFloat) {
+        self.layer.cornerRadius = cornerRadius
+        self.layer.masksToBounds = true
+    }
+    
+    public func c_setBorderWidth(borderWidth:CGFloat) {
+        self.layer.borderWidth = borderWidth
+    }
+    
+    public func c_setShadowRadius(radius:CGFloat) {
+        self.layer.shadowRadius = radius
+        self.layer.masksToBounds = true
+    }
+    
+    public func c_setShadowOffset(shadowOffset:CGSize) {
+        self.layer.shadowOffset = shadowOffset
+    }
+    
+    public func c_setShadowOpacity(shadowOpacity:Float) {
+        self.layer.shadowOpacity = shadowOpacity
+    }
+    
+    public func c_setCornerRadiusAvoidOffScreen(radius:CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: (UIRectCorner.allCorners), cornerRadii: CGSize(width: radius, height: radius))
+           let shaperLayer = CAShapeLayer()
+           shaperLayer.frame = self.bounds
+           shaperLayer.path = path.cgPath
+           self.layer.mask = shaperLayer
+       }
+    
+    public func c_setCornerLeftTopAndRightBottom(radius:CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: (UIRectCorner(rawValue: UIRectCorner.topLeft.rawValue|UIRectCorner.bottomRight.rawValue)), cornerRadii: CGSize(width: radius, height: radius))
+        let shaperLayer = CAShapeLayer()
+        shaperLayer.frame = self.bounds
+        shaperLayer.path = path.cgPath
+        self.layer.mask = shaperLayer
+    }
+    
+    public func c_setCornerLeftTopAndRightTop(radius:CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: (UIRectCorner(rawValue: UIRectCorner.topLeft.rawValue|UIRectCorner.topRight.rawValue)), cornerRadii: CGSize(width: radius, height: radius))
+        let shaperLayer = CAShapeLayer()
+        shaperLayer.frame = self.bounds
+        shaperLayer.path = path.cgPath
+        self.layer.mask = shaperLayer
+    }
+    
 }
