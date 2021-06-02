@@ -23,6 +23,7 @@
 		A4F077462639571D00EFD834 /* LNGWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F077422639571C00EFD834 /* LNGWindowManager.swift */; };
 		A4F077842639660900EFD834 /* UIView+LNG.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F077832639660900EFD834 /* UIView+LNG.swift */; };
 		A4F077C9263A8EC400EFD834 /* UIImage+LNG.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F077C8263A8EC400EFD834 /* UIImage+LNG.swift */; };
+		A4FDE58926672DD90062970C /* LNGFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FDE58826672DD90062970C /* LNGFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		A4F077422639571C00EFD834 /* LNGWindowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNGWindowManager.swift; sourceTree = "<group>"; };
 		A4F077832639660900EFD834 /* UIView+LNG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LNG.swift"; sourceTree = "<group>"; };
 		A4F077C8263A8EC400EFD834 /* UIImage+LNG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+LNG.swift"; sourceTree = "<group>"; };
+		A4FDE58826672DD90062970C /* LNGFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNGFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				A4F077422639571C00EFD834 /* LNGWindowManager.swift */,
+				A4FDE58826672DD90062970C /* LNGFileManager.swift */,
 				A4F077832639660900EFD834 /* UIView+LNG.swift */,
 				A4F077C8263A8EC400EFD834 /* UIImage+LNG.swift */,
 				A4437A64263BA6EA00EFFA94 /* UIColor+LNG.swift */,
@@ -185,6 +188,7 @@
 				A4D17A49263807D900B4259C /* AppDelegate.swift in Sources */,
 				A4D17A4B263807D900B4259C /* SceneDelegate.swift in Sources */,
 				A4F077462639571D00EFD834 /* LNGWindowManager.swift in Sources */,
+				A4FDE58926672DD90062970C /* LNGFileManager.swift in Sources */,
 				A4F077C9263A8EC400EFD834 /* UIImage+LNG.swift in Sources */,
 				A4437A6C263BA7D000EFFA94 /* UILabel+LNG.swift in Sources */,
 				A4437A75263BAC5E00EFFA94 /* UIViewController+LNG.swift in Sources */,
