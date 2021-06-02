@@ -5,28 +5,119 @@
 //  Created by sun on 2021/6/2.
 //
 
+import WebKit
 import Foundation
 import UIKit
 
-class LNGFileManager {
+public class LNGFileManager {
     
-    // MARK: - 图片保存沙盒和获取
-    public class func c_getPictureFromDocuments(name:String) ->(UIImage?) {
-        let picturePath = LNGFileManager.c_creatPicturePathOfDocuments(name: name)
+    // MARK: - Size
+    public class func c_getLibraryCacheSizeString() -> String {
+        let size = LNGFileManager.c_getLibraryCacheSize()
+        return LNGFileManager.c_sizeToSizeString(size: size)
+    }
+    
+    public class func c_getLibraryCacheSize() -> Double {
+        let libraryCachesPath = LNGFileManager.c_libraryCachesPath() as String
+        let fileArray = FileManager.default.subpaths(atPath: libraryCachesPath)
+        guard let f = fileArray else {
+            return 0
+        }
+        var size: Double = 0
+        for file in f {
+            let path = libraryCachesPath + "\(file)"
+            if FileManager.default.fileExists(atPath: path) {
+                let floder = try! FileManager.default.attributesOfItem(atPath: path)
+                for (abc, bcd) in floder {
+                    if abc == FileAttributeKey.size {
+                        size += (bcd as AnyObject).doubleValue
+                    }
+                }
+            }
+        }
+        return size
+    }
+    
+    public class func c_getFileSizeString(path:String) -> String {
+        let size = LNGFileManager.c_getFileSize(path: path)
+        let sizeString = LNGFileManager.c_sizeToSizeString(size: size)
+        return sizeString
+    }
+    
+    public class func c_getFileSize(path:String) -> Double {
+        var size: Double = 0
+        if FileManager.default.fileExists(atPath: path) {
+            let floder = try! FileManager.default.attributesOfItem(atPath: path)
+            for (abc, bcd) in floder {
+                if abc == FileAttributeKey.size {
+                    size += (bcd as AnyObject).doubleValue
+                }
+            }
+        }
+        return size
+    }
+    
+    private class func c_sizeToSizeString(size:Double) -> (String) {
+        if size >= 1024.0 * 1024.0 * 1024.0 {
+            let cache = size / 1024.0 / 1024.0 / 1024.0
+            return String(format: "%0.fG", cache)
+        } else if size >= 1024.0 * 1024.0 {
+            let cache = size / 1024.0 / 1024.0
+            return String(format: "%0.fMB", cache)
+        } else {
+            let cache = size / 1024.0
+            return String(format: "%0.fKB", cache)
+        }
+    }
+    
+    // MARK: - Clear
+    public class func c_clearWebviewCache() {
+        let websiteDataTypes = NSSet(array: [WKWebsiteDataTypeDiskCache, WKWebsiteDataTypeMemoryCache])
+        let date = NSDate(timeIntervalSince1970: 0)
+        WKWebsiteDataStore.default().removeData(ofTypes: websiteDataTypes as! Set<String>, modifiedSince: date as Date, completionHandler:{ })
+    }
+    
+    public class func c_clearLibraryCache() {
+        //cache文件夹
+        let libraryCachesPath = LNGFileManager.c_libraryCachesPath() as String
+        //文件夹下所有文件
+        let files = FileManager.default.subpaths(atPath: libraryCachesPath)
+        guard let f = files else {
+            return
+        }
+        //遍历删除
+        for file in f {
+            //文件名
+            let path = libraryCachesPath + "\(file)"
+            //存在就删除
+            if FileManager.default.fileExists(atPath: path) {
+                do {
+                    try FileManager.default.removeItem(atPath: path)
+                } catch  {
+                    print("出错了！")
+                }
+            }
+        }
+        
+    }
+    
+    // MARK: - 图片保存沙盒缓存和获取
+    public class func c_getPictureFromDocuments(path:String) ->(UIImage?) {
+        let picturePath = LNGFileManager.c_creatPicturePathOfLibraryCaches(path: path)
         let image = UIImage(contentsOfFile: picturePath)
         return image
     }
     
-    public class func c_savePictureToDocuments(image:UIImage, name:String) {
+    public class func c_savePictureToDocuments(image:UIImage, path:String) {
         let pictureData = image.pngData()
-        let picturePath = LNGFileManager.c_creatPicturePathOfDocuments(name: name)
+        let picturePath = LNGFileManager.c_creatPicturePathOfLibraryCaches(path: path)
         if let p = pictureData as NSData? {
             p.write(toFile: picturePath, atomically: true)
         }
     }
     
-    public class func c_creatPicturePathOfDocuments(name:String) -> (String) {
-        let picturePath = LNGFileManager.c_documentsPath().appendingPathComponent("\(name).png")
+    public class func c_creatPicturePathOfLibraryCaches(path:String) -> (String) {
+        let picturePath = LNGFileManager.c_libraryCachesPath().appendingPathComponent("\(path).png")
         return picturePath
     }
     
