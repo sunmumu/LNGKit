@@ -10,6 +10,35 @@ import UIKit
 
 extension UIViewController {
     
+    @discardableResult
+    public func c_showAlert(title: String?, message: String?, buttonTitles: [String]? = nil, highlightedButtonIndex: Int? = nil, isShowCancle:Bool? = false, preferredStyle:UIAlertController.Style, completion: ((Int) -> Void)? = nil) -> UIAlertController {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
+        var allButtons = buttonTitles ?? [String]()
+        if allButtons.count == 0 {
+            allButtons.append("OK")
+        }
+
+        for index in 0..<allButtons.count {
+            let buttonTitle = allButtons[index]
+            let action = UIAlertAction(title: buttonTitle, style: .default, handler: { (_) in
+                completion?(index)
+            })
+            alertController.addAction(action)
+            // Check which button to highlight
+            if let highlightedButtonIndex = highlightedButtonIndex, index == highlightedButtonIndex {
+                alertController.preferredAction = action
+            }
+        }
+        
+        if let cancle = isShowCancle, cancle == true {
+            let action = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            alertController.addAction(action)
+        }
+        
+        present(alertController, animated: true, completion: nil)
+        return alertController
+    }
+    
     public func c_getVC(className:String? = nil,storyboardName:String? = nil) -> UIViewController?{
         let vc = VCMake.c_getVC(className: className, storyboardName: storyboardName)
         return vc
