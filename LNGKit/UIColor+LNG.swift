@@ -20,7 +20,7 @@ extension UIColor {
         guard self.getRed(&red, green: &green, blue: &blue, alpha: &alpha) else {
             return nil
         }
-         
+        
         if alpha == 1.0 {
             return String(
                 format: "#%02lX%02lX%02lX",

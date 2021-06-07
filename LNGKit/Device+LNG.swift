@@ -8,25 +8,9 @@
 import Foundation
 import UIKit
 
-// MARK: - 判断 机型
-let isiPhone5 = UIDevice.isiPhone5()
-let isiPhone6 = UIDevice.isiPhone6()
-let isiPhone6BigModel = UIDevice.isiPhone6BigMode()
-let isiPhone6Plus = UIDevice.isiPhone6Plus()
-let isiPhone6PlusBigMode = UIDevice.isiPhone6PlusBigMode()
-let isiPhoneX = UIDevice.isiPhoneX()
-let isIpad = UIDevice.isAiPad()
-
-// MARK: - 系统类型
-let kisiOS11 = UIDevice.isiOS11()
-let kisiOS10 = UIDevice.isiOS10()
-let kisiOS9 = UIDevice.isiOS9()
-let kisiOS8 = UIDevice.isiOS8()
-
 extension UIDevice {
 
     public func Version()->String{
-
         let appVersion: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
         return appVersion
     }
