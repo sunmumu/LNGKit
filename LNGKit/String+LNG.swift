@@ -41,9 +41,10 @@ public extension String {
     /// string 解析成 urlString (处理 带中文解析转换, #字符不解析转换)
     /// - Returns: string
     func c_urlConvert() -> String? {
+        let decodingString = self.removingPercentEncoding
         var charSet = CharacterSet.urlQueryAllowed
         charSet.insert(charactersIn: "#")
-        let encodingURL = self.addingPercentEncoding(withAllowedCharacters: charSet )
+        let encodingURL = decodingString?.addingPercentEncoding(withAllowedCharacters: charSet )
         return encodingURL
     }
     
