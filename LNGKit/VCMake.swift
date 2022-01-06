@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 class VCMake {
-    public class func c_getVC(className:String?,storyboardName:String?) -> UIViewController?{
-        if className==nil && storyboardName == nil {
+    public class func c_getVC(className:String?,storyboardName:String?) -> UIViewController? {
+        if className == nil && storyboardName == nil {
             return nil
         }
         if className == nil && (storyboardName != nil) {
@@ -23,7 +23,7 @@ class VCMake {
                 let vcClass = NSClassFromString(classStringName) as! UIViewController.Type
                 let vc = vcClass.init()
                 return vc
-            }else {
+            } else {
                 return nil
             }
         }

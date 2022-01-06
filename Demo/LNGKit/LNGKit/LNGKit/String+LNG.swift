@@ -27,6 +27,52 @@ public extension String {
         return self.trimmingCharacters(in: whitespace)
     }
     
+    /// 获取字符串高度 (传入font/限制的宽度)
+    /// - Parameters:
+    ///   - font: 字体和大小
+    ///   - fixedWidth: 限制的宽度
+    /// - Returns: 计算的字符串高度
+    func c_heightWithFont(font : UIFont = UIFont.systemFont(ofSize: 17), fixedWidth : CGFloat) -> CGFloat {
+        guard self.count > 0 && fixedWidth > 0 else {
+            return 0
+        }
+        let size = CGSize.init(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude)
+        let text = self as NSString
+        let rect = text.boundingRect(with: size, options:.usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : font], context:nil)
+        return rect.size.height
+    }
+    
+    ///  获取字符串高度 (传入font/限制的宽度/行间距)
+    /// - Parameters:
+    ///   - font: 字体和大小
+    ///   - lineSpacing: 行间距
+    ///   - fixedWidth: 限制的宽度
+    /// - Returns: 计算的字符串高度
+    func c_heightWithFont(font : UIFont = UIFont.systemFont(ofSize: 17), lineSpacing:CGFloat,  fixedWidth : CGFloat = 4) -> CGFloat {
+        guard self.count > 0 && fixedWidth > 0 else {
+            return 0
+        }
+        let size = CGSize.init(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude)
+        let text = self as NSString
+        
+        let paraph = NSMutableParagraphStyle()
+        //将行间距设置为4
+        paraph.lineSpacing = lineSpacing
+        let rect = text.boundingRect(with: size, options:.usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font,NSAttributedString.Key.paragraphStyle: paraph], context:nil)
+        return rect.size.height
+    }
+    
+    /// 获取字符串宽度(传入font/限制的高度)
+    /// - Parameters:
+    ///   - fontSize: 字体和大小
+    ///   - height: 限制的高度
+    /// - Returns: 计算的字符串宽度
+    func c_widthWithFont(fontSize: CGFloat, height: CGFloat = 15) -> CGFloat {
+        let font = UIFont.systemFont(ofSize: fontSize)
+        let rect = NSString(string: self).boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: height), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+        return ceil(rect.width)
+    }
+    
     /// 去掉首尾空格 后 指定开头空格数
     /// - Parameter num: 开头空格数
     /// - Returns: String
