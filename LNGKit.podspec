@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'LNGKit'
-  s.version      = '0.1.6'
+  s.version      = '0.1.7'
   s.summary      = 'A collection of iOS components.'
   s.homepage     = 'https://github.com/sunmumu/LNGKit'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
