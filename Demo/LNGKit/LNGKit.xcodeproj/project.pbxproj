@@ -20,6 +20,8 @@
 		A4D17A50263807D900B4259C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D17A4E263807D900B4259C /* Main.storyboard */; };
 		A4D17A52263807D900B4259C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D17A51263807D900B4259C /* Assets.xcassets */; };
 		A4D17A55263807D900B4259C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D17A53263807D900B4259C /* LaunchScreen.storyboard */; };
+		A4E3DC272787ECE90088D0C1 /* LNGWeChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3DC262787ECE90088D0C1 /* LNGWeChatManager.swift */; };
+		A4E3DC292787ED420088D0C1 /* LNGGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3DC282787ED420088D0C1 /* LNGGradientLayer.swift */; };
 		A4F077462639571D00EFD834 /* LNGWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F077422639571C00EFD834 /* LNGWindowManager.swift */; };
 		A4F077842639660900EFD834 /* UIView+LNG.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F077832639660900EFD834 /* UIView+LNG.swift */; };
 		A4F077C9263A8EC400EFD834 /* UIImage+LNG.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F077C8263A8EC400EFD834 /* UIImage+LNG.swift */; };
