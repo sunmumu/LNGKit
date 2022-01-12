@@ -45,6 +45,8 @@
 		A4D17A51263807D900B4259C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4D17A54263807D900B4259C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4D17A56263807D900B4259C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4E3DC262787ECE90088D0C1 /* LNGWeChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNGWeChatManager.swift; sourceTree = "<group>"; };
+		A4E3DC282787ED420088D0C1 /* LNGGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNGGradientLayer.swift; sourceTree = "<group>"; };
 		A4F077422639571C00EFD834 /* LNGWindowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNGWindowManager.swift; sourceTree = "<group>"; };
 		A4F077832639660900EFD834 /* UIView+LNG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LNG.swift"; sourceTree = "<group>"; };
 		A4F077C8263A8EC400EFD834 /* UIImage+LNG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+LNG.swift"; sourceTree = "<group>"; };
@@ -100,6 +102,9 @@
 		A4D17A5F263808C700B4259C /* LNGKit */ = {
 			isa = PBXGroup;
 			children = (
+				A4437A77263BACCD00EFFA94 /* VCMake.swift */,
+				A4E3DC282787ED420088D0C1 /* LNGGradientLayer.swift */,
+				A4E3DC262787ECE90088D0C1 /* LNGWeChatManager.swift */,
 				A4F077422639571C00EFD834 /* LNGWindowManager.swift */,
 				A4FDE58826672DD90062970C /* LNGFileManager.swift */,
 				A4FDE58A2669BD400062970C /* String+LNG.swift */,
@@ -110,7 +115,6 @@
 				A4437A6E263BA88B00EFFA94 /* UITabBar+LNG.swift */,
 				A4437A71263BA8D900EFFA94 /* Device+LNG.swift */,
 				A4437A74263BAC5E00EFFA94 /* UIViewController+LNG.swift */,
-				A4437A77263BACCD00EFFA94 /* VCMake.swift */,
 			);
 			path = LNGKit;
 			sourceTree = "<group>";
@@ -192,9 +196,11 @@
 				A4D17A49263807D900B4259C /* AppDelegate.swift in Sources */,
 				A4D17A4B263807D900B4259C /* SceneDelegate.swift in Sources */,
 				A4F077462639571D00EFD834 /* LNGWindowManager.swift in Sources */,
+				A4E3DC292787ED420088D0C1 /* LNGGradientLayer.swift in Sources */,
 				A4FDE58926672DD90062970C /* LNGFileManager.swift in Sources */,
 				A4F077C9263A8EC400EFD834 /* UIImage+LNG.swift in Sources */,
 				A4437A6C263BA7D000EFFA94 /* UILabel+LNG.swift in Sources */,
+				A4E3DC272787ECE90088D0C1 /* LNGWeChatManager.swift in Sources */,
 				A4437A75263BAC5E00EFFA94 /* UIViewController+LNG.swift in Sources */,
 				A4437A65263BA6EA00EFFA94 /* UIColor+LNG.swift in Sources */,
 				A4437A72263BA8D900EFFA94 /* Device+LNG.swift in Sources */,

@@ -49,11 +49,19 @@ extension UIView {
     
     public func c_setCornerRadiusAvoidOffScreen(radius:CGFloat) {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: (UIRectCorner.allCorners), cornerRadii: CGSize(width: radius, height: radius))
-           let shaperLayer = CAShapeLayer()
-           shaperLayer.frame = self.bounds
-           shaperLayer.path = path.cgPath
-           self.layer.mask = shaperLayer
-       }
+       let shaperLayer = CAShapeLayer()
+       shaperLayer.frame = self.bounds
+       shaperLayer.path = path.cgPath
+       self.layer.mask = shaperLayer
+    }
+    
+    public func c_setCornerRadius(radius:CGFloat, corner:UIRectCorner) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corner, cornerRadii: CGSize(width: radius, height: radius))
+       let shaperLayer = CAShapeLayer()
+       shaperLayer.frame = self.bounds
+       shaperLayer.path = path.cgPath
+       self.layer.mask = shaperLayer
+    }
     
     public func c_setCornerLeftTopAndRightBottom(radius:CGFloat) {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: (UIRectCorner(rawValue: UIRectCorner.topLeft.rawValue|UIRectCorner.bottomRight.rawValue)), cornerRadii: CGSize(width: radius, height: radius))
